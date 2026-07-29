@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Task Manager</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>📋 Interactive Task Manager</h1>
+
+        <!-- Search -->
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search tasks...">
+
+        <!-- Add Task -->
+
+        <div class="task-input">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter new task">
+
+            <input
+                type="date"
+                id="dueDate">
+
+            <button id="addBtn">Add</button>
+
+        </div>
+
+        <!-- Statistics -->
+
+        <div class="stats">
+
+            <div class="stat-card total">
+
+                <div class="icon">📋</div>
+
+                <h2 id="totalCount">0</h2>
+
+                <p>Total Tasks</p>
+
+            </div>
+
+            <div class="stat-card completed">
+
+                <div class="icon">✅</div>
+
+                <h2 id="completedCount">0</h2>
+
+                <p>Completed</p>
+
+            </div>
+
+            <div class="stat-card pending">
+
+                <div class="icon">⏳</div>
+
+                <h2 id="pendingCount">0</h2>
+
+                <p>Pending</p>
+
+            </div>
+
+        </div>
+
+        <!-- Empty Message -->
+
+        <p id="emptyMessage">
+            📝 No tasks available. Add your first task!
+        </p>
+
+        <!-- Task List -->
+
+        <ul id="taskList"></ul>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
