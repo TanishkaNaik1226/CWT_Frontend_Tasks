@@ -32,8 +32,6 @@ A responsive product landing page developed using HTML5, CSS3, and JavaScript.
 
 **Technologies:** `HTML5` `CSS3` `JavaScript`
 
-🔗 [View Project](#)
-
 ---
 
 ### ✅ Week 3 – Interactive Task Manager
