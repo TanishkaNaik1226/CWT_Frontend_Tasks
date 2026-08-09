@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Complete your purchase at ShopEase. Enter shipping details and choose your payment method." />
+  <title>Checkout - ShopEase</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect fill='%236366f1' width='36' height='36' rx='8'/><text x='50%25' y='55%25' font-size='20' fill='white' text-anchor='middle' dominant-baseline='middle' font-family='sans-serif' font-weight='bold'>S</text></svg>" />
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="ShopEase Home">
+        <span class="logo-icon">S</span>
+        ShopEase
+      </a>
+
+      <nav id="navLinks" class="nav-links" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="wishlist.html" class="nav-cart" title="Wishlist">
+          Wishlist
+          <span class="wishlist-count" style="display: none;">0</span>
+        </a>
+        <a href="cart.html" class="nav-cart" title="Cart">
+          Cart
+          <span class="cart-count" aria-label="Cart items">0</span>
+        </a>
+      </nav>
+
+      <div id="hamburger" class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN ==================== -->
+  <main>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Checkout</h1>
+        <p>You're almost there — complete your details below to place your order.</p>
+      </div>
+    </section>
+
+    <!-- Empty Checkout State -->
+    <div id="emptyCheckout" class="empty-checkout" style="display: none;">
+      <!-- Populated by checkout.js -->
+    </div>
+
+    <!-- Checkout Content -->
+    <section class="checkout-page">
+      <div class="container">
+        <form id="checkoutForm" class="checkout-layout" novalidate>
+
+          <!-- LEFT: Customer & Shipping Form -->
+          <div>
+            <!-- Customer Information -->
+            <div class="checkout-form-section" style="margin-bottom: 24px;">
+              <h3 class="form-section-title">
+                <span class="section-number">1</span>
+                Customer Information
+              </h3>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="fullName">Full Name <span class="required">*</span></label>
+                  <input type="text" id="fullName" name="fullName" placeholder="John Doe" autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" autocomplete="email" />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number <span class="required">*</span></label>
+                  <input type="tel" id="phone" name="phone" placeholder="9876543210" maxlength="10" autocomplete="tel" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Shipping Address -->
+            <div class="checkout-form-section" style="margin-bottom: 24px;">
+              <h3 class="form-section-title">
+                <span class="section-number">2</span>
+                Shipping Address
+              </h3>
+              <div class="form-grid">
+                <div class="form-group full-width">
+                  <label for="address">Address <span class="required">*</span></label>
+                  <input type="text" id="address" name="address" placeholder="123, MG Road, Bandra" autocomplete="street-address" />
+                </div>
+                <div class="form-group">
+                  <label for="city">City <span class="required">*</span></label>
+                  <input type="text" id="city" name="city" placeholder="Mumbai" autocomplete="address-level2" />
+                </div>
+                <div class="form-group">
+                  <label for="state">State <span class="required">*</span></label>
+                  <input type="text" id="state" name="state" placeholder="Maharashtra" autocomplete="address-level1" />
+                </div>
+                <div class="form-group">
+                  <label for="pincode">Pincode <span class="required">*</span></label>
+                  <input type="text" id="pincode" name="pincode" placeholder="400001" maxlength="6" autocomplete="postal-code" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="checkout-form-section payment-section">
+              <h3 class="form-section-title">
+                <span class="section-number">3</span>
+                Payment Method
+              </h3>
+              <div class="payment-options" id="paymentGroup">
+                <div class="payment-option">
+                  <input type="radio" id="cod" name="payment" value="cod" />
+                  <label for="cod">
+                    <svg class="payment-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+                    Cash on Delivery
+                  </label>
+                </div>
+                <div class="payment-option">
+                  <input type="radio" id="card" name="payment" value="card" />
+                  <label for="card">
+                    <svg class="payment-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    Credit / Debit Card
+                  </label>
+                </div>
+                <div class="payment-option">
+                  <input type="radio" id="upi" name="payment" value="upi" />
+                  <label for="upi">
+                    <svg class="payment-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    UPI
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Order Summary -->
+          <aside class="checkout-summary" id="checkoutContent">
+            <h2>Order Summary</h2>
+
+            <div class="order-items-list" id="orderItems">
+              <!-- Populated by checkout.js -->
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="orderSubtotal">₹0</span>
+            </div>
+            <div class="summary-row">
+              <span>Delivery</span>
+              <span id="orderDelivery">FREE</span>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <span id="orderTotal">₹0</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Place Order
+            </button>
+          </aside>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== ORDER SUCCESS MODAL ==================== -->
+  <div id="orderSuccessModal" class="order-success-modal" role="dialog" aria-labelledby="successTitle">
+    <div class="success-modal-content">
+      <div class="success-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h2 id="successTitle">Order Placed Successfully! 🎉</h2>
+      <p>Thank you for shopping with ShopEase.</p>
+      <p>Your order ID is:</p>
+      <div class="order-id" id="orderIdDisplay">ORD-2026-00000</div>
+      <div>
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+        <a href="products.html" class="btn btn-secondary">Continue Shopping</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">S</span>
+            ShopEase
+          </a>
+          <p>Your one-stop destination for quality products at unbeatable prices.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">FB</a>
+            <a href="#" class="social-link" aria-label="Twitter">TW</a>
+            <a href="#" class="social-link" aria-label="Instagram">IG</a>
+            <a href="#" class="social-link" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="products.html?category=Electronics">Electronics</a></li>
+            <li><a href="products.html?category=Fashion">Fashion</a></li>
+            <li><a href="products.html?category=Home%20%26%20Living">Home &amp; Living</a></li>
+            <li><a href="products.html?category=Sports">Sports</a></li>
+            <li><a href="products.html?category=Beauty">Beauty</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Mumbai, India
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              info@shopease.in
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +91 98765 43210
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ShopEase. All rights reserved. | Built for CHAND WEB TECHNOLOGY PVT. LTD.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+
+</body>
+</html>

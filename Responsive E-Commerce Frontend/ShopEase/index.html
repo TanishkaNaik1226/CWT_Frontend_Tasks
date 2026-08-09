@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ShopEase - Discover trending electronics, fashion, home essentials, sports gear, and beauty products at unbeatable prices. Shop now!" />
+  <title>ShopEase - Responsive E-Commerce Store</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect fill='%236366f1' width='36' height='36' rx='8'/><text x='50%25' y='55%25' font-size='20' fill='white' text-anchor='middle' dominant-baseline='middle' font-family='sans-serif' font-weight='bold'>S</text></svg>" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="ShopEase Home">
+        <span class="logo-icon">S</span>
+        ShopEase
+      </a>
+
+      <nav id="navLinks" class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">Products</a>
+        <a href="wishlist.html" class="nav-cart" title="Wishlist">
+          Wishlist
+          <span class="wishlist-count" style="display: none;">0</span>
+        </a>
+        <a href="cart.html" class="nav-cart" title="Cart">
+          Cart
+          <span class="cart-count" aria-label="Cart items">0</span>
+        </a>
+      </nav>
+
+      <div id="hamburger" class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-tag">✨ New Arrivals 2026</span>
+          <h1>Discover Products You'll Love</h1>
+          <p>Shop the latest trends in electronics, fashion, home décor, sports, and beauty — all at prices that make you smile.</p>
+          <a href="products.html" class="btn btn-accent">Shop Now →</a>
+        </div>
+      </div>
+      <div class="hero-shape hero-shape-1"></div>
+      <div class="hero-shape hero-shape-2"></div>
+      <div class="hero-shape hero-shape-3"></div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <h2>Shop by Category</h2>
+          <p>Browse our curated collections across five popular categories.</p>
+        </div>
+        <div class="categories-grid">
+          <a href="products.html?category=Electronics" class="category-card cat-electronics">
+            <div class="category-icon">💻</div>
+            <h3>Electronics</h3>
+          </a>
+          <a href="products.html?category=Fashion" class="category-card cat-fashion">
+            <div class="category-icon">👗</div>
+            <h3>Fashion</h3>
+          </a>
+          <a href="products.html?category=Home%20%26%20Living" class="category-card cat-home">
+            <div class="category-icon">🏠</div>
+            <h3>Home &amp; Living</h3>
+          </a>
+          <a href="products.html?category=Sports" class="category-card cat-sports">
+            <div class="category-icon">⚽</div>
+            <h3>Sports</h3>
+          </a>
+          <a href="products.html?category=Beauty" class="category-card cat-beauty">
+            <div class="category-icon">✨</div>
+            <h3>Beauty</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface);">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Products</h2>
+          <p>Hand-picked favourites our customers love.</p>
+        </div>
+        <div class="products-grid" id="featuredGrid">
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="products.html" class="btn btn-secondary">View All Products →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="promo-banner">
+          <div class="promo-content">
+            <span class="promo-tag">🔥 Limited Time</span>
+            <h2>Summer Sale — Up to 50% Off</h2>
+            <p>Don't miss out on incredible deals across electronics, fashion, and more. Sale ends soon!</p>
+            <a href="products.html" class="btn">Shop the Sale →</a>
+          </div>
+          <div class="promo-shapes" aria-hidden="true">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">S</span>
+            ShopEase
+          </a>
+          <p>Your one-stop destination for quality products at unbeatable prices. We bring you the best in electronics, fashion, home décor, sports, and beauty.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">FB</a>
+            <a href="#" class="social-link" aria-label="Twitter">TW</a>
+            <a href="#" class="social-link" aria-label="Instagram">IG</a>
+            <a href="#" class="social-link" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="products.html?category=Electronics">Electronics</a></li>
+            <li><a href="products.html?category=Fashion">Fashion</a></li>
+            <li><a href="products.html?category=Home%20%26%20Living">Home &amp; Living</a></li>
+            <li><a href="products.html?category=Sports">Sports</a></li>
+            <li><a href="products.html?category=Beauty">Beauty</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Mumbai, India
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              info@shopease.in
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +91 98765 43210
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ShopEase. All rights reserved. | Built for CHAND WEB TECHNOLOGY PVT. LTD.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const grid = document.getElementById('featuredGrid');
+      if (!grid) return;
+      const featured = products.filter(function (p) { return p.featured; }).slice(0, 8);
+      grid.innerHTML = featured.map(function (p) { return createProductCard(p); }).join('');
+    });
+  </script>
+
+</body>
+</html>
